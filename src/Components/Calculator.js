@@ -42,14 +42,20 @@ class Calculator extends React.Component {
   render() {
     return (
       <div class="calcText">
-        <h3>
+        <div class="travelingToText">
           Traveling from {this.props.selectedDeparture} to{" "}
           {this.props.selectedArrival}
-        </h3>
-        <h3>Total Mileage:</h3>
-        {this.props.mileage}
-        <div class="largerText">{this.reCalculateBoom()}</div>
-        <div class="smallerText">{this.reCalculateReg()}</div>
+        </div>
+        <div class="container">
+          <div class="left-child">
+            <div class="helperText">Distance:</div>
+            <div class="helperText">{`${this.props.mileage} miles`}</div>
+          </div>
+          <div class="right-child">
+            <div class="largerText">{this.reCalculateBoom()}</div>
+            <div class="smallerText">{this.reCalculateReg()}</div>
+          </div>
+        </div>
       </div>
     );
   }
