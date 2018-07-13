@@ -1,0 +1,31 @@
+.center-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boom-text {
+  text-align: center;
+}
+
+.calcText {
+  color: white;
+  margin: 25px;
+}
+
+.background {
+  background-color: black;
+}
+
+.logo {
+  width: 30%;
+  height: auto;
+  margin: 50px;
+}
+
+.largerText {
+  font-size: 20px;
+}
+.smallerText {
+  font-size: 15px;
+}

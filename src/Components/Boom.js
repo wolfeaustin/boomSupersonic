@@ -1,6 +1,8 @@
 import React from "react";
 import Selector from "./Selector";
 import Calculator from "./Calculator";
+import "../Styling.css";
+import logo from "../logo.jpg";
 class Boom extends React.Component {
   constructor() {
     super();
@@ -41,7 +43,7 @@ class Boom extends React.Component {
 
     let city = e.currentTarget.innerText;
     let route = this.state.allRoutes.find(
-      r => r.departure == this.state.selectedDeparture && r.arrival == city
+      r => r.departure === this.state.selectedDeparture && r.arrival === city
     );
 
     this.setState({
@@ -55,7 +57,7 @@ class Boom extends React.Component {
 
     let city = e.currentTarget.innerText;
     let arrivals = this.state.allRoutes
-      .filter(r => r.departure == city)
+      .filter(r => r.departure === city)
       .map(c => c.arrival);
     this.setState({
       selectedDeparture: city,
@@ -65,26 +67,33 @@ class Boom extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>BOOM</h1>
-        <Selector
-          handleArrival={this.handleArrival}
-          handleDeparture={this.handleDeparture}
-          selectedDeparture={this.state.selectedDeparture}
-          selectedArrival={this.state.selectedArrival}
-          allRoutes={this.state.allRoutes}
-          departures={this.state.departures}
-          availableDestinations={this.state.availableDestinations}
-        />
-        {this.state.mileage == "" ? (
-          <div />
-        ) : (
-          <Calculator
+      <div class="background">
+        <div class="center-elements">
+          <img class="logo" src={logo} alt="logo" />
+        </div>
+
+        <div class="center-elements">
+          <Selector
+            handleArrival={this.handleArrival}
+            handleDeparture={this.handleDeparture}
             selectedDeparture={this.state.selectedDeparture}
             selectedArrival={this.state.selectedArrival}
-            mileage={this.state.mileage}
-            direction={this.state.direction}
+            allRoutes={this.state.allRoutes}
+            departures={this.state.departures}
+            availableDestinations={this.state.availableDestinations}
           />
+        </div>
+        {this.state.mileage === "" ? (
+          <div />
+        ) : (
+          <div class="center-elements">
+            <Calculator
+              selectedDeparture={this.state.selectedDeparture}
+              selectedArrival={this.state.selectedArrival}
+              mileage={this.state.mileage}
+              direction={this.state.direction}
+            />
+          </div>
         )}
       </div>
     );

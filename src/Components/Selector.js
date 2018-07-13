@@ -25,7 +25,7 @@ class Selector extends React.Component {
           selection
           options={this.props.departures}
         />
-        <Icon name="arrow right" />
+        <Icon color="grey" name="arrow right" />
         <Dropdown
           placeholder="Arrival City"
           style={{ margin: "10px" }}
