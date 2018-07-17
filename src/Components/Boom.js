@@ -69,7 +69,10 @@ class Boom extends React.Component {
     return (
       <div class="background">
         <div class="center-elements">
-          <img class="logo" src={logo} alt="logo" />
+          <div class="title-text">Supersonic vs. Subsonic</div>
+        </div>
+        <div class="center-elements">
+          <div class="subtitle-text">Flight Time Calculator</div>
         </div>
 
         <div class="center-elements">

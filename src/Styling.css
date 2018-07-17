@@ -4,6 +4,22 @@
   justify-content: center;
 }
 
+.title-text {
+  color: white;
+  font-size: 40px;
+  padding-top: 50px;
+}
+.subtitle-text {
+  color: white;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.selector {
+  padding-bottom: 50px;
+}
+
 .boom-text {
   text-align: center;
 }
@@ -24,6 +40,7 @@
 
 .background {
   background-color: black;
+  height: 100vh;
 }
 
 .logo {

@@ -16,7 +16,7 @@ class Selector extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="selector">
         <Dropdown
           placeholder="Departure City"
           style={{ margin: "10px" }}
